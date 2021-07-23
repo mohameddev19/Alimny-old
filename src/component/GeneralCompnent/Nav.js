@@ -1,9 +1,31 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {NavLink} from 'react-router-dom';
 import {useSelector, useDispatch} from 'react-redux';
 import {login, logout, teacher, student} from '../../store/action';
 
-function SearchNav(){
+function SearchNav(props){
+    const [searchTitle, setSearchTitle] = useState('');
+    const [Search, setSearch] = useState([]);
+    function hanldeSearch(e){
+        const search_bar = document.getElementById("search");
+        setSearchTitle(search_bar.value);
+    }
+    function search(){
+        const btn = document.getElementById("search_btn");
+        const search_bar = document.getElementById("search");
+        hanldeSearch();
+        search_bar.addEventListener("keydown", (z) =>{
+            if(z.key == "Enter"){
+                btn.click();
+            }
+        });
+        
+    }
+    useEffect(()=>{
+        const Searchbar = props.search;
+        setSearchTitle(Searchbar);
+    }, []);
+
     const islogged = useSelector((state) => state.logcase.logcase);
     const dispatch = useDispatch();
     function hanldeLogout(){
@@ -22,7 +44,7 @@ function SearchNav(){
                 /* this if altogther will be turn */
                 ?<NavLink exact to="/login"><button className="login-btn">Log in</button></NavLink>
                 :<div className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
-                <img className="user-image" src="./images/User-image.png" alt="user"/>
+                <img className="user-image" src="../images/User-image.png" alt="user"/>
                 <span className="user-name">Mohammed Abdalla</span>
                 </div>
                 }
@@ -37,10 +59,11 @@ function SearchNav(){
                 </div>
             </div>
             <div className="col-8">
-                <img className="logo" src="./images/Logo.png" alt="logo" />
+                <img className="logo" src="../images/Logo.png" alt="logo" />
                 <span className="alimny"><NavLink exact to="/">ALIMNY</NavLink></span>
                 <span className="search-span">
-                    <input className="search" type="search" />
+                    <input id="search" className="search" value={searchTitle} onChange={hanldeSearch} onKeyDown={search} type="serch" />
+                    <NavLink to={"/search/" + searchTitle}><input id="search_btn" type="button" hidden /></NavLink>
                     <hr />
                 </span>
 
@@ -48,7 +71,30 @@ function SearchNav(){
         </div>
     );
 }
-function HomeNav(){
+function HomeNav(props){
+
+    const [searchTitle, setSearchTitle] = useState('');
+    const [Search, setSearch] = useState([]);
+    function hanldeSearch(e){
+        const search_bar = document.getElementById("search");
+        setSearchTitle(search_bar.value);
+    }
+    function search(){
+        const btn = document.getElementById("search_btn");
+        const search_bar = document.getElementById("search");
+        hanldeSearch();
+        search_bar.addEventListener("keydown", (z) =>{
+            if(z.key == "Enter"){
+                btn.click();
+            }
+        });
+        
+    }
+    useEffect(()=>{
+        const Searchbar = props.search;
+        setSearchTitle(Searchbar);
+    }, []);
+
     const islogged = useSelector((state) => state.logcase.logcase);
     const dispatch = useDispatch();
     function hanldeLogout(){
@@ -62,12 +108,12 @@ function HomeNav(){
     return(
         <div className="navbar home-nav row justify-content-center">
             <div className="left-a-div col-4">
-                <img className="home-logo logo" src="./images/Logo.png" alt="logo" />
+                <img className="home-logo logo" src="../images/Logo.png" alt="logo" />
                 <span className="home-alimny alimny"><NavLink exact to="/">ALIMNY</NavLink></span>
                 
                 {islogged
                 ?<div className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
-                <img className="user-image" src="./images/User-image.png" alt="user"/>
+                <img className="user-image" src="../images/User-image.png" alt="user"/>
                 <span className="user-name">Mohammed Abdalla</span>
                 </div>
                 :<NavLink className="login" exact to="/login"><button>Log in</button></NavLink>
@@ -85,7 +131,8 @@ function HomeNav(){
             <div className="col-6 home-r">
                 <span></span>
                 <span className="search-span">
-                    <input className="search" type="search" />
+                    <input id="search" className="search" value={searchTitle} onChange={hanldeSearch} onKeyDown={search} type="serch" />
+                    <NavLink to={"/search/" + searchTitle}><input id="search_btn" type="button" hidden /></NavLink>
                     <hr />
                 </span>
 
@@ -112,7 +159,7 @@ function Nav(){
                 /* this if altogther will be turn */
                 ?<NavLink exact to="/login"><button className="login-btn">Log in</button></NavLink>
                 :<div className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
-                <img className="user-image" src="./images/User-image.png" alt="user"/>
+                <img className="user-image" src="../images/User-image.png" alt="user"/>
                 <span className="user-name">Mohammed Abdalla</span>
                 </div>
                 }
@@ -127,7 +174,7 @@ function Nav(){
                 </div>
             </div>
             <div className="col-6">
-                <img className="logo" src="./images/Logo.png" alt="logo" />
+                <img className="logo" src="../images/Logo.png" alt="logo" />
                 <span className="alimny"><NavLink exact to="/">ALIMNY</NavLink></span>
 
             </div>
@@ -153,7 +200,7 @@ function BoardNav(){
                 /* this if altogther will be turn */
                 ?<NavLink exact to="/login"><button className="login-btn">Log in</button></NavLink>
                 :<div className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
-                <img className="user-image" src="./images/User-image.png" alt="user"/>
+                <img className="user-image" src="../images/User-image.png" alt="user"/>
                 <span className="user-name">Mohammed Abdalla</span>
                 </div>
                 }
@@ -168,7 +215,7 @@ function BoardNav(){
                 </div>
             </div>
             <div className="col-6">
-                <img className="logo" src="./images/Board-logo.png" alt="logo" />
+                <img className="logo" src="../images/Board-logo.png" alt="logo" />
                 <span className="alimny"><NavLink exact to="/">ALIMNY</NavLink></span>
 
             </div>

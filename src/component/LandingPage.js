@@ -5,14 +5,14 @@ import {Link, NavLink} from 'react-router-dom';
 function Landingf(){
 
     const[Search, setSearch] = useState("");
-    function hanldSearch(){
+    function hanldeSearch(){
         const search_bar = document.getElementById("search");
         setSearch(search_bar.value);
     }
     function search(){
         const btn = document.getElementById("search_btn");
         const search_bar = document.getElementById("search");
-        hanldSearch();
+        hanldeSearch();
         search_bar.addEventListener("keydown", (z) =>{
             if(z.key == "Enter"){
                 btn.click();
@@ -29,7 +29,7 @@ function Landingf(){
                 <button className="r-btn">About Us</button>
             </div>
             <div>
-                <input id="search" value={Search} onChange={hanldSearch} onKeyDown={search} type="serch" />
+                <input id="search" value={Search} onChange={hanldeSearch} onKeyDown={search} type="serch" />
                 <Link to={"/search/" + Search}><input id="search_btn" type="button" hidden /></Link>
             </div>
         </div>

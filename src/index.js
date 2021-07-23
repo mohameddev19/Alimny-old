@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM, {render} from 'react-dom';
+import './css/bootstrap.css';
 import './style.css';
 import {Links} from './component/App';
 import reducers from './store/reducers';
