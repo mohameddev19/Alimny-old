@@ -1,0 +1,8 @@
+user table:
+	career
+	precis
+	last lesson
+course table:
+	prizing number
+	prizing total
+	

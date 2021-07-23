@@ -1,0 +1,11 @@
+email error
+pass error
+contact
+email purchase
+reset pass
+email verify
+404
+log
+sing
+verified
+verification
