@@ -44,7 +44,7 @@ function SearchNav(props){
                 /* this if altogther will be turn */
                 ?<NavLink exact to="/login"><button className="login-btn">Log in</button></NavLink>
                 :<div className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
-                <img className="user-image" src="../images/User-image.png" alt="user"/>
+                <img className="user-image" src="../../images/User-image.png" alt="user"/>
                 <span className="user-name">Mohammed Abdalla</span>
                 </div>
                 }
@@ -59,7 +59,7 @@ function SearchNav(props){
                 </div>
             </div>
             <div className="col-8">
-                <img className="logo" src="../images/Logo.png" alt="logo" />
+                <img className="logo" src="../../images/Logo.png" alt="logo" />
                 <span className="alimny"><NavLink exact to="/">ALIMNY</NavLink></span>
                 <span className="search-span">
                     <input id="search" className="search" value={searchTitle} onChange={hanldeSearch} onKeyDown={search} type="serch" />
@@ -108,12 +108,12 @@ function HomeNav(props){
     return(
         <div className="navbar home-nav row justify-content-center">
             <div className="left-a-div col-4">
-                <img className="home-logo logo" src="../images/Logo.png" alt="logo" />
+                <img className="home-logo logo" src="../../images/Logo.png" alt="logo" />
                 <span className="home-alimny alimny"><NavLink exact to="/">ALIMNY</NavLink></span>
                 
                 {islogged
                 ?<div className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
-                <img className="user-image" src="../images/User-image.png" alt="user"/>
+                <img className="user-image" src="../../images/User-image.png" alt="user"/>
                 <span className="user-name">Mohammed Abdalla</span>
                 </div>
                 :<NavLink className="login" exact to="/login"><button>Log in</button></NavLink>
@@ -159,7 +159,7 @@ function Nav(){
                 /* this if altogther will be turn */
                 ?<NavLink exact to="/login"><button className="login-btn">Log in</button></NavLink>
                 :<div className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
-                <img className="user-image" src="../images/User-image.png" alt="user"/>
+                <img className="user-image" src="../../images/User-image.png" alt="user"/>
                 <span className="user-name">Mohammed Abdalla</span>
                 </div>
                 }
@@ -174,7 +174,7 @@ function Nav(){
                 </div>
             </div>
             <div className="col-6">
-                <img className="logo" src="../images/Logo.png" alt="logo" />
+                <img className="logo" src="../../images/Logo.png" alt="logo" />
                 <span className="alimny"><NavLink exact to="/">ALIMNY</NavLink></span>
 
             </div>

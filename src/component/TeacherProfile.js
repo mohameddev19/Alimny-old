@@ -24,7 +24,7 @@ function TeacherProfilef(){
                 </div>
                 <div className="nav-div row">
                 <span className="teacher-image col-12">
-                        <img className="" src="./images/User-image.png" alt="user"/>
+                        <img className="" src="../images/User-image.png" alt="user"/>
                     </span>
                     <span className="teacher col-12">
                         <span>
@@ -38,13 +38,13 @@ function TeacherProfilef(){
                     </span>
                     <span className="media col-12">
                         <a href="www.facebook.com">
-                            <img src="./images/facebook.png" alt="media" />
+                            <img src="../images/facebook.png" alt="media" />
                         </a>
                         <a href="www.github.com">
-                            <img src="./images/github.png" alt="media" />
+                            <img src="../images/github.png" alt="media" />
                         </a>
                         <a href="www.linkedin.com">
-                            <img src="./images/linkedin.png" alt="media" />
+                            <img src="../images/linkedin.png" alt="media" />
                         </a>
                     </span>
                 </div>
@@ -61,12 +61,12 @@ function TeacherProfilef(){
                 {/* teacher courses here */}
                 <div className="course course-12 col-12 row">
                     <div className="">
-                        <img className="course-image" src="./images/adobe.jpg" alt="White-star"  />
+                        <img className="course-image" src="../images/adobe.jpg" alt="White-star"  />
                         <NavLink className="course-title" exact to="/course/">
                             <div className="title">Adobe Illustrator Fundmentals</div>
                             <span className="rate">
                                 <span>4.6</span>
-                                <img src="./images/White-star.png" alt="White-star" />
+                                <img src="../images/White-star.png" alt="White-star" />
                             </span>
                         </NavLink>
                     </div>

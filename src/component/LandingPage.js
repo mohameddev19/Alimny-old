@@ -25,8 +25,8 @@ function Landingf(){
             <h3>First educational</h3>
             <h3>Website in Sudan {"&"} Africa</h3>
             <div className="btn-div">
-                <button className="l-btn">Get Started</button>
-                <button className="r-btn">About Us</button>
+                <Link to="/login"><button className="l-btn">Get Started</button></Link>
+                <Link to="/about"><button className="r-btn">About Us</button></Link>
             </div>
             <div>
                 <input id="search" value={Search} onChange={hanldeSearch} onKeyDown={search} type="serch" />
@@ -61,7 +61,16 @@ function Landingf(){
             </div>
         </div>
         <div className="see-all-div">
-            <button>See all</button>
+            <a className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mail" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+            <button >See all</button>
+            </a>
+            <div className="navbar-collapse collapse" id="mail">
+                <ul className="navbar-nav mb-2 mb-lg-0">
+                    <li className="nav-item"><Link className="left-a nav-link" activeClassName="selected" exact to="/repport">welcome! we'll add this feature later</Link></li>
+                    <li>be close</li>
+                </ul>
+            </div>
+            
         </div>
         <Footer />
     </div>

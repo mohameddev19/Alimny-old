@@ -2,6 +2,7 @@ import React from 'react';
 import {Landing} from './LandingPage';
 import {Signup} from './Signup';
 import {Login} from './Login';
+import {UsedErorr} from './UsedErorr';
 import {Verification} from './Verification';
 import {Verified} from './Verified';
 import {Home} from './Home';
@@ -13,9 +14,7 @@ import {Privacy} from './Privacy';
 import {Trems} from './Trems';
 import {Cookies} from './Cookies';
 import {HelpCenter} from './HelpCenter';
-import {MyCourses} from './MyCourses';
 import {Course} from './Course';
-import {Profile} from './Profile';
 import {SeeAll} from './SeeAll';
 import {Settings} from './Settings';
 import {TeacherProfile} from './TeacherProfile';
@@ -23,15 +22,18 @@ import {UploadCourse} from './UploadCourse';
 import {Lessons} from './Lessons';
 import {Lesson} from './Lesson';
 import {Whiteboard} from './Whiteboard';
-import {BrowserRouter, Route} from 'react-router-dom';
+import {NotFound} from './NotFound';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 function Links(){
     return(
         <BrowserRouter>
             <div className="body">
+                <Switch>
                 <Route exact path="/" component={Landing} />
                 <Route exact path="/Signup" component={Signup} />
                 <Route exact path="/Login" component={Login} />
+                <Route exact path="/erorr/:type" component={UsedErorr} />
                 <Route exact path="/verification" component={Verification} />
                 <Route exact path="/verified" component={Verified} />
                 <Route exact path="/:userName/home" component={Home} />
@@ -43,18 +45,18 @@ function Links(){
                 <Route exact path="/trems" component={Trems} />
                 <Route exact path="/cookies" component={Cookies} />
                 <Route exact path="/help" component={HelpCenter} />
-                <Route exact path="/:teacherName/courses" component={MyCourses} />
                 <Route exact path="/:courseName/course" component={Course} />
-                <Route exact path="/:userName/profile" component={Profile} />
                 <Route exact path="/:catalogy/catalogy" component={SeeAll} />
                 <Route exact path="/:userName/settings" component={Settings} />
                 <Route exact path="/:userName/upload-course" component={UploadCourse} />
-                <Route exact path="/:courseName/course/lessons" component={Lessons} />
+                <Route exact path="/:courseName/lessons" component={Lessons} />
                 <Route exact path="/:courseName/course/:lessonName" component={Lesson} />
                 <Route exact path="/:teacherName/whiteboard" component={Whiteboard} />
-                {/*TecherProfile well change to teacher course*/}
+                {/*TecherProfile will be changed to teacher course -unnesessary :)-*/}
                 <Route exact path="/:teacherName/teacher" component={TeacherProfile} />
-                </div>
+                <Route component={NotFound} />
+                </Switch>
+            </div>
         </BrowserRouter>
     );
 }

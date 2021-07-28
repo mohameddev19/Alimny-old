@@ -137,6 +137,7 @@ a:hover{
 .left-a-div{
     position: relative;
     padding-left: 0 !important;
+    user-select: none;
 }
 .navbar .navbar-toggler{
     padding: 0.25rem 0.5rem;
@@ -230,7 +231,7 @@ a:hover{
     height: 2rem;
     width: 13rem;
     margin-top: .5rem;
-    padding-left: .6rem;
+    padding-left: 1.4rem;
     padding-right: .5rem;
     border-radius: 4px;
     background-color: #ffffff;
@@ -379,6 +380,7 @@ a:hover{
 
 
 /*------Landing------*/
+
 .Landing .top-bar{
     display: flex;
     flex-wrap: wrap;
@@ -476,6 +478,7 @@ a:hover{
 }
 
 .Landing .see-all-div{
+    position: relative;
     margin-top: 3rem;
     width: 100%;
     text-align: center;
@@ -488,6 +491,33 @@ a:hover{
     border-radius: 2px;
     background-color: var(--green);
     color: #ffffff;
+    font-size: 14px;
+}
+.Landing .navbar-toggler{
+    padding: 0.25rem 0.5rem;
+}
+.Landing .navbar-collapse{
+    position: absolute;
+    left: calc(50% - 6.15rem);
+    top: 100%;
+    z-index: 9;
+    width: 12.3rem;
+    padding: 3px !important;
+    text-align: center;
+    margin: 0 !important;
+    font-size: 14px;
+    background-color: #ffffff;
+    box-shadow: 0 3px 4px 1px var(--shadow);
+}
+.Landing .collapse{
+    z-index: 9;
+    width: 12.3rem;
+    text-align: center;
+    margin: 0 !important;
+    font-size: 14px;
+}
+.Landing .nav-item{
+    box-shadow: 0 0px 0px 0px var(--shadow);
 }
 
 
@@ -1073,6 +1103,7 @@ a:hover{
 .page-left{
     position: relative;
     height: 80%;
+    user-select: none;
 }
 .page-left .mail-div{
     position: relative;
@@ -1142,7 +1173,7 @@ a:hover{
     left: calc(-120% + -4.3rem);
     top: 100%;
     z-index: 9;
-    width: 12.3rem;
+    width: 12.6rem;
     padding: 3px !important;
     text-align: center;
     margin: 0 !important;
@@ -1152,16 +1183,18 @@ a:hover{
 }
 .page-left .collapse{
     z-index: 9;
-    width: 12.3rem;
+    width: 12.6rem;
     text-align: center;
     margin: 0 !important;
     font-size: 14px;
 }
 .page-left .navbar-nav{
     padding-inline-start: 0 !important;
+    padding-left: .2rem !important;
+    padding-right: .2rem !important;
 }
 .page-left .nav-item{
-    border: solid 1px var(--color);
+    box-shadow: 0 3px 4px 1px var(--shadow);
 }
 
 .page-left .nav-div{
@@ -1190,6 +1223,9 @@ a:hover{
     font-size: 12px;
     color: var(--color);
     font-weight: 600;
+}
+.page-div .left-green{
+    color: var(--green);
 }
 .page-left .left-last{
     display: flex;
@@ -1253,8 +1289,10 @@ a:hover{
 .page-right .course > div{
     position: relative;
     display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
-    height: 5rem;
+    height: 4.5rem;
     width: 8rem;
     margin-bottom: 1.5rem;
     margin-left: 1rem;
@@ -1340,15 +1378,6 @@ a:hover{
         width: 0;
         height: 0;
     }
-    .page-right .course-12 > div:first-child{
-        margin-left: 95rem;
-    }
-    .page-right .course-8 > div:first-child{
-        margin-left: 57.5rem;
-    }
-    .page-right .course-4 > div:first-child{
-        margin-left: 23rem;
-    }
 }
 @media screen and (max-width: 1199.98px){
     .page-div{
@@ -1372,6 +1401,8 @@ a:hover{
     }
     .page-div .catlogy-div{
         margin-left: 1.5rem;
+        margin-bottom: 1.5rem;
+        padding: .5rem;
         background-color: #ffffff;
         border-radius: 5px;
         box-shadow: 0 3px 4px 1px var(--shadow);
@@ -1456,15 +1487,9 @@ a:hover{
     margin-left: .6rem;
 }
 
-
-
-
 @media screen and (max-width: 434.98px){
     .teacher-div{
         padding-left: 6% !important;
-    }
-    .teacher-div .course-8 > div:first-child{
-        margin-left: 95rem;
     }
 }
 @media screen and (max-width: 1199.98px){
@@ -1581,9 +1606,6 @@ a:hover{
     height: 70%;
     padding-bottom: .6rem;
 }
-.setting-div .left-setting{
-    color: var(--green);
-}
 .setting-div font{
     color: var(--green);
 }
@@ -1606,6 +1628,7 @@ a:hover{
     margin-bottom: 1rem;
 }
 .setting-div .image-chang{
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1630,6 +1653,8 @@ a:hover{
 }
 .setting-div .image-chang input{
     position: absolute;
+    top: 0;
+    left: 0;
     width: 5rem;
     height: 5rem;
     background-color: rgba(0, 0, 0, 0);
@@ -1639,6 +1664,29 @@ a:hover{
     opacity: 0;
     z-index: 2;
     cursor: pointer;
+}
+.page-div .user-Newimage{
+    position: absolute;
+}
+.page-div .croped{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 6;
+}
+.page-div .croped .close{
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #ffffff;
+    background-color: var(--color);
+    outline: none;
+    border: none;
+}
+.page-div .croped .close:hover{
+    background-color: #8b5252 !important;
+    color: #ffffff;
 }
 
 .setting-div .name-chage{
@@ -1833,7 +1881,7 @@ a:hover{
 }
 
 
-/*------setting------*/
+/*------upload------*/
 
 .upload-div .page-left{
     position: relative;
@@ -1872,11 +1920,12 @@ a:hover{
     margin-bottom: 1rem;
 }
 .upload-div .image-chang{
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 6rem;
-    height: 5rem;
+    width: 7rem;
+    height: 4rem;
     margin-right: 6%;
     margin-bottom: 1rem;
     border: solid 1px var(--green);
@@ -1898,8 +1947,10 @@ a:hover{
 }
 .upload-div .image-chang input{
     position: absolute;
-    width: 5rem;
-    height: 5rem;
+    top: 0;
+    left: 0;
+    width: 7rem;
+    height: 4rem;
     background-color: rgba(0, 0, 0, 0);
     border: none !important;
     outline: none;
@@ -1907,6 +1958,29 @@ a:hover{
     opacity: 0;
     z-index: 2;
     cursor: pointer;
+}
+.upload-div .user-Newimage{
+    position: absolute;
+}
+.upload-div .croped{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 6;
+}
+.upload-div .croped .close{
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #ffffff;
+    background-color: var(--color);
+    outline: none;
+    border: none;
+}
+.upload-div .croped .close:hover{
+    background-color: #8b5252 !important;
+    color: #ffffff;
 }
 
 .upload-div .name-chage{
@@ -2097,6 +2171,11 @@ a:hover{
 
 /*------lessons------*/
 
+
+.lessons-div .nav-div{
+    height: 75%;
+    padding-bottom: .6rem;
+}
 .lessons-div .nav-div img {
     opacity: 1;
     height: 7rem;
@@ -2136,6 +2215,9 @@ a:hover{
     margin-right: 0 !important;
     margin-left: 0 !important;
 }
+.lessons-div .nav-div .input{
+    display: none;
+}
 
 
 .lessons-div .course .edit{
@@ -2143,11 +2225,11 @@ a:hover{
     width: 1rem;
     top: .3rem;
     right: .3rem;
-    background-color: #ffffff;
+    cursor: pointer;
 }
 .lessons-div .shadow{
     position: fixed;
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -2238,22 +2320,42 @@ a:hover{
 
 .lessons-div .close-btn{
     outline: none;
-    border: solid 2px var(--green);
+    border: solid 2px var(--green) !important;
     border-radius: 0 !important;
-    height: 1.4rem;
+    height: 1.6rem;
     width: 5.4rem;
-    background-color: #ffffff;
-    color: var(--color);
+    background-color: #ffffff !important;
+    color: var(--color) !important;
+    font-size: 14px;
+}
+.lessons-div .close-btn:hover{
+    outline: none;
+    border: solid 2px var(--green) !important;
+    border-radius: 0 !important;
+    height: 1.6rem;
+    width: 5.4rem;
+    background-color: #ffffff !important;
+    color: var(--color) !important;
     font-size: 14px;
 }
 .lessons-div .save-btn{
     outline: none;
     border: solid 2px var(--green);
     border-radius: 0 !important;
-    height: 1.4rem;
+    height: 1.6rem;
     width: 5.4rem;
     background-color: var(--green);
     color: #ffffff;
+    font-size: 14px;
+}
+.lessons-div .save-btn:hover{
+    outline: none;
+    border: solid 2px var(--green);
+    border-radius: 0 !important;
+    height: 1.6rem;
+    width: 5.4rem;
+    background-color: var(--green) !important;
+    color: #ffffff !important;
     font-size: 14px;
 }
 
@@ -2361,6 +2463,7 @@ a:hover{
 .lesson-div .wh{
     display: inline-flex;
     flex-wrap: nowrap;
+    width: 100%;
     min-height: 3rem;
 }
 .lesson-div .wh-image{
@@ -2393,6 +2496,54 @@ a:hover{
     opacity: 0;
     z-index: 1;
 }
+
+.lesson-div .wh-input{
+    display: none;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-left: 2.7rem;
+    padding-right: .5rem;
+}
+.lesson-div .wh-input .send-btn{
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+}
+.lesson-div .wh-input input{
+    outline: none;
+    border: solid 1px var(--green);
+    border-radius: 0 !important;
+    height: 1.6rem;
+    width: 50%;
+    background-color: #ffffff;
+    color: var(--green);
+    font-size: 13px;
+}
+.lesson-div .wh-input .close-btn{
+    outline: none;
+    border: solid 1px #8b5252;
+    border-radius: 0 !important;
+    height: 1.6rem;
+    width: 50%;
+    background-color: #ffffff;
+    color: #8b5252;
+    font-size: 13px;
+}
+.lesson-div .wh-input textarea{
+    outline: none;
+    border-radius: 0;
+    border: solid 1px #698B52;
+    font-size: 13px;
+    padding: .5rem;
+    width: 100%;
+    min-height: 3rem;
+    resize: vertical;
+}
+.lesson-div .wh-input textarea::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+}
+
 .lesson-div .answer .wh-title{
     border: none;
     background-color: rgba(103, 103, 103, 0.1);
@@ -2435,7 +2586,7 @@ a:hover{
 }
 
 
-/*------lessons------*/
+/*------whiteboard------*/
 
 .board-body{
     height: 100%;
@@ -2593,4 +2744,620 @@ a:hover{
     left: calc(50% - 1.5rem);
     bottom: 0;
     width: 3rem;
+}
+
+
+/*------not found------*/
+
+.not-found-body{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.not-found .logo{
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    margin-top: 4rem;
+    margin-left: 2rem;
+    color: #698B52;
+    font-weight: bold;
+}
+.not-found .logo h4{
+    font-family:'Poppins';
+    color: #698B52;
+    font-weight: bolder;
+}
+.not-found .title-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 40rem;
+}
+.not-found .title-div .title{
+    padding: 2rem;
+    background-color: rgba(105, 139, 82, 0.2);
+    border-radius: 6px;
+}
+.not-found .title-div h1{
+    font-weight:900;
+    color: #698B52;
+}
+.not-found .title-div p{
+    font-size: 12px;
+    color: #698B52;
+}
+
+
+/*------erorr------*/
+
+.error-body{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.error .title-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 33rem;
+    padding-top: 5rem;
+}
+.error .title-div .title{
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    background-color: var(--bg);
+    box-shadow: 0 3.5px 9px 2px var(--shadow);
+    border-radius: 6px;
+}
+.error .title-div h6{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    color: #fd8888;
+}
+.error .title-div p{
+    font-size: 12px;
+    color: #676767;
+}
+.error .title-div input{
+    outline: none;
+    border: none;
+    border-radius: 0 ;
+    height: 1.6rem;
+    width: 5.4rem;
+    background-color: var(--bg) ;
+    box-shadow: 0 4px 5px 2px var(--shadow);
+    color: var(--color);
+    font-weight: 500;
+    font-size: 12px;
+}
+
+
+/*------course------*/
+
+.course-div{
+    margin-top: 2rem;
+}
+.course-div .page-left{
+    text-align: center;
+    height: 90%;
+}
+.course-div .page-right{
+    background-color: var(--bg);
+    box-shadow: none;
+    padding-right: 3rem;
+}
+.course-div .nav-div{
+    height: 100%;
+    padding: 1.5rem;
+    padding-top: 1rem;
+}
+.course-div .nav-div .course-name{
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--green);
+}
+.course-div .lessons-number{
+    margin-bottom: 2rem;
+}
+.course-div .lessons-number p{
+    font-size: 13px;
+    font-weight: 500;
+}
+.course-div .lessons-number font{
+    font-size: 13px;
+    font-weight: 600;
+    color: #676767;
+}
+.course-div .teacher-image img{
+    width: 5rem;
+    height: 5rem;
+    margin-right: 0 !important;
+    background-color: rgba(103, 103, 103, 0.3);
+    opacity: 1;
+    border-radius: 3px;
+}
+.course-div .teacher-name{
+    margin-bottom: 1rem;
+}
+.course-div .teacher-name .name{
+    font-size: 12px;
+    font-weight: bold;
+    color: #676767;
+}
+.course-div .page-left .rate{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: .5rem;
+}
+.course-div .page-left .rate img{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+.course-div .page-left .offline-link{
+    position: relative;
+}
+.course-div .page-left .offline-link p{
+    font-size: 13px;
+    text-decoration: underline;
+    color: #676767;
+    cursor: not-allowed;
+}
+.course-div .page-left .navbar-toggler{
+    padding: 0.25rem 0.5rem;
+}
+.course-div .page-left .navbar-collapse{
+    position: absolute;
+    left: calc(50% - 6.15rem);
+    top: 100%;
+    z-index: 9;
+    width: 12.3rem;
+    padding: 3px !important;
+    text-align: center;
+    margin: 0 !important;
+    font-size: 14px;
+    background-color: #ffffff;
+    box-shadow: 0 3px 4px 1px var(--shadow);
+}
+.course-div .page-left .collapse{
+    z-index: 9;
+    width: 12.3rem;
+    text-align: center;
+    margin: 0 !important;
+    font-size: 14px;
+}
+.course-div .page-left .navbar-nav{
+    padding-inline-start: 0 !important;
+    padding-left: .2rem !important;
+    padding-right: .2rem !important;
+}
+.course-div .page-left .nav-item{
+    color: #8b5252;
+    box-shadow: 0 3px 4px 1px var(--shadow);
+}
+.course-div .page-left .nav-item a{
+    color: #8b5252;
+}
+.course-div .page-left .price h3{
+    color: #676767;
+    font-size: 20px;
+    font-weight: 600;
+}
+.course-div .page-left .add .sale-btn{
+    border: none;
+    outline: none;
+    background-color: var(--green);
+    color: #ffffff;
+    border-radius: 3px;
+    padding: .2rem;
+    height: 2rem;
+    width: 12rem;
+    font-size: 12px;
+}
+.course-div .page-left .add-wish a{
+    margin-top: 1rem;
+    background-color: #ffffff;
+    color: #676767;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.course-div .page-right h5{
+    color: var(--green);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.course-div .page-right div{
+    margin-bottom: 1rem;
+}
+.course-div .page-right div h6{
+    color: #414141;
+    font-size: 14px;
+    font-weight: 400;
+}
+.course-div .page-right div p{
+    font-size: 13px;
+}
+
+
+.course-div .page-right h6{
+    color: #414141;
+    font-size: 14px;
+    font-weight: 400;
+}
+.course-div .page-right .div-ratings{
+    position: relative;
+}
+.course-div .page-right .ratings{
+    position: relative;
+    margin-top: .5rem;
+    width: 95%;
+    height: 8rem;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.course-div .page-right .div-btn-l{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: -5%;
+    margin-top: .5rem;
+    height: 7rem;
+    width: 2rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    z-index: 1;
+}
+.course-div .page-right .div-btn-r{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    margin-top: .5rem;
+    height: 7rem;
+    width: 2rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    z-index: 1;
+}
+.course-div .page-right .btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2.3rem;
+    background-color: rgba(105, 139, 82, 0.2);
+    color: var(--green);
+}
+.course-div .page-right .ratings::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+}
+.course-div .page-right .ratings div{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 7rem;
+    width: 12rem;
+    background-color: rgba(103, 103, 103, 0.1);
+    margin-bottom: 1.5rem;
+    margin-right: 1rem;
+    border-radius: 8px;
+    padding: .4rem;
+    padding-top: 2rem;
+}
+.course-div .page-right .ratings div:first-child{
+    background-color: #E2EADE;
+}
+.course-div .page-right .ratings div p{
+    color: var(--green);
+    text-align: center;
+}
+
+
+@media screen and (max-width: 749.98px){
+    .course-div{
+        height: initial;
+        min-height: 100%;
+    }
+}
+@media screen and (max-width: 1199.98px){
+    .course-div .page-left{
+        display: flex;
+        margin-right: 0 !important;
+        padding-left: 2.5%;
+    }
+    .course-div .page-right{
+        padding-right: 0rem;
+        --bs-gutter-x: 0  !important;
+    }
+    .course-div .page-right .div-btn{
+        right: 0;
+    }
+}
+
+
+/*------contact------*/
+
+.contact-body{
+    min-height: 90% !important;
+}
+.contact-div{
+    padding-left: 0;
+    min-height: 90%;
+}
+.contact-div .contact-body{
+    position: relative;
+    justify-content: flex-start;
+    min-height: 30rem;
+    padding-left: 0;
+    padding-bottom: 0;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px 5px var(--big-shadow);
+    border-radius: 10px;
+    padding-right: 0;
+    overflow: hidden;
+}
+.contact-div .btn-bar{
+    height: 5rem;
+    border-bottom: solid 1px #676767;
+    padding-left: 0;
+    padding-right: 0;
+}
+.contact-div .btn{
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: .6px;
+}
+.contact-div .btn:hover{
+    background-color: rgba(103, 103, 103, 0.1);
+}
+.contact-div #number-div{
+    background-color: rgba(105, 139, 82, 0.4);
+}
+.contact-div .btn svg{
+    width: 4rem;
+    fill: var(--color);
+}
+.contact-div #number-div svg{
+    fill: #506843;
+}
+.contact-div .contact-form{
+    min-height: 25rem;
+    margin-top: 1rem;
+    font-size: 12px;
+    color: #414141;
+    padding-top: .4rem;
+    font-weight: 300;
+}
+
+.contact-form .msg-form{
+    display: none;
+}
+.contact-div .contact-form font{
+    color: var(--color);
+    font-size: 11px;
+}
+
+.contact-div .contact-form .image-1{
+    padding-bottom: 3rem;
+}
+.contact-div .image-1 img{
+    width: 14rem;
+    margin-top: .6rem;
+}
+.contact-div .image-1 h3{
+    position: relative;
+    color: var(--green);
+    margin-bottom: 1rem;
+}
+.contact-div .image-1 h3::after{
+    position: absolute;
+    content: '';
+    top: calc(100% + .4rem);
+    left: 0;
+    width: 7rem;
+    height: 1px;
+    color: #414141;
+    background-color: #414141;
+}
+
+.contact-div label{
+    width: 100%;
+    text-align: center;
+}
+
+.contact-div .input-div{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 1.5rem;
+    width: 100%;
+    margin-right: .5rem !important;
+    margin-bottom: 1.6rem;
+}
+.contact-div input{
+    position: relative;
+    outline: none;
+    border: none;
+    height: 1.5rem;
+    width: 13rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    border-radius: 2px;
+    background-color: #ffffff;
+    font-size: 13px;
+    box-shadow: 0 3px 4px 1px var(--shadow);
+}
+.contact-div input::placeholder{
+    text-align: center;
+}
+.contact-div hr{
+    position: absolute;
+    width: 12.4rem !important;
+    height: 1px;
+    bottom: -.8rem;
+    color: black;
+    z-index: 1;
+}
+
+.contact-div .textarea-div{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 14rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+.contact-div textarea{
+    position: relative;
+    outline: none;
+    border: none;
+    height: 14rem;
+    width: 18rem !important;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    border-radius: 2px;
+    background-color: #ffffff;
+    font-size: 80%;
+    box-shadow: 0 3px 4px 1px var(--shadow);
+}
+.contact-div textarea:focus{
+    z-index: 2;
+}
+.contact-div textarea::placeholder{
+    text-align: center;
+}
+.contact-div .textarea-div hr{
+    position: absolute;
+    width: 17.4rem !important;
+    height: 1px;
+    bottom: 12rem;
+    color: black;
+    z-index: 1;
+}
+
+.contact-div .button{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+.contact-div .button button{
+    outline: none;
+    border: none;
+    width: 17.4rem !important;
+    height: 2rem;
+    border-radius: 2px;
+    background-color: var(--green);
+    color: #ffffff;
+    font-size: 14px;
+}
+.contact-div .faq{
+    text-align: center;
+}
+.contact-div .faq a{
+    color: var(--green);
+    font-weight: 400;
+}
+
+.contact-form .number-form{
+    display: flex;
+    z-index: 1;
+}
+.contact-form .number-form h4{
+    margin-top: 20%;
+    color: var(--green);
+}
+.contact-form .number-form h2{
+    margin-top: 2rem;
+    font-weight: 800;
+    color: var(--green);
+    width: 6rem;
+    margin-left: 6rem;
+}
+.contact-form .number-form .img{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.contact-form .number-form .img img{
+    height: 14rem;
+    width: 14rem;
+}
+
+.contact-form .map-form{
+    position: relative;
+    display: none;
+}
+.contact-form .map-form p{
+    width: 100%;
+    text-align: center;
+    font-weight: 400;
+}
+.contact-form .map-form div{
+    margin-top: -6rem;
+}
+.contact-form .map-form h5{
+    font-weight: 300;
+    color: var(--green);
+}
+
+
+@media screen and (max-width: 410px){
+    .contact-div .textarea-div hr{
+        width: 90% !important;
+    }
+}
+@media screen and (min-width: 992px){
+    .contact-div hr{
+        width: 95%;
+    }
+    .contact-div .textarea-div hr{
+        width: 95% !important;
+    }
+    .contact-div .button button{
+        width: 95%;
+    }
+}
+@media screen and (max-width: 1199.98px){
+    .contact-div .contact-form .image{
+        display: none;
+    }
+}
+@media screen and (min-width: 1200px){
+    .contact-div .contact-form .image{
+        display: flex;
+        flex-wrap: wrap;
+    }
 }

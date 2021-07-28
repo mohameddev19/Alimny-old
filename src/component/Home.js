@@ -23,7 +23,7 @@ function Homef(){
                 <div className="mail-div">
                     <div className="mail-d row">
                         <span className="user-sm-image col-2">
-                            <img className="" src="./images/User-image.png" alt="user"/>
+                            <img className="" src="../images/User-image.png" alt="user"/>
                         </span>
                         <span className="user col-6">
                             <span>
@@ -33,7 +33,7 @@ function Homef(){
                         </span>
                         <span className="mail col-3">
                             <a className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mail" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
-                                <img className="mail-image" src="./images/mail.png" alt="user"/>
+                                <img className="mail-image" src="../images/mail.png" alt="user"/>
                             </a>
                             <div className="navbar-collapse collapse" id="mail">
                                 <ul className="navbar-nav mb-2 mb-lg-0">
@@ -46,20 +46,20 @@ function Homef(){
                 </div>
                 <div className="nav-div row">
                     <div className="col-12">
-                        <Link className="left-items" exact to="/class">
-                            <img src="./images/grid.png" alt="grid" />
+                        <Link className="left-items left-green" exact to="/class">
+                            <img src="../images/grid.png" alt="grid" />
                             Classes
                         </Link>
                     </div>
                     <div className="col-12">
                         <Link className="left-items" exact to="/setting">
-                            <img src="./images/grid.png" alt="grid" />
+                            <img src="../images/grid.png" alt="grid" />
                             Setting
                         </Link>
                     </div>
                     <div className="col-12">
                         <Link className="left-items" exact to="/class">
-                            <img src="./images/grid.png" alt="grid" />
+                            <img src="../images/grid.png" alt="grid" />
                             AFQ
                         </Link>
                     </div>
@@ -83,12 +83,12 @@ function Homef(){
                 {/* saved courses here */}
                 <div className="course course-8 col-12 row">
                     <div className="">
-                        <img className="course-image" src="./images/adobe.jpg" alt="White-star"  />
+                        <img className="course-image" src="../images/adobe.jpg" alt="White-star"  />
                         <NavLink className="course-title" exact to="/course/">
                             <div className="title">Adobe Illustrator Fundmentals</div>
                             <span className="rate">
                                 <span>4.6</span>
-                                <img src="./images/White-star.png" alt="White-star" />
+                                <img src="../images/White-star.png" alt="White-star" />
                             </span>
                         </NavLink>
                     </div>

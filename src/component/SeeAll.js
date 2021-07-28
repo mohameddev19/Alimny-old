@@ -4,6 +4,7 @@ import {Footer} from './GeneralCompnent/Footer';
 import {Link, NavLink} from 'react-router-dom';
 import {useSelector, useDispatch} from 'react-redux';
 import {login, logout, teacher, student} from './../store/action';
+
 function SeeAllf(){
     const dispatch = useDispatch();
     const isstudent = useSelector((state) => state.typecase.typecase);
@@ -25,19 +26,19 @@ function SeeAllf(){
                 <div className="nav-div row">
                     <div className="col-12">
                         <Link className="left-items" exact to="/class">
-                            <img src="./images/grid.png" alt="grid" />
+                            <img src="../../images/grid.png" alt="grid" />
                             Classes
                         </Link>
                     </div>
                     <div className="col-12">
                         <Link className="left-items" exact to="/setting">
-                            <img src="./images/grid.png" alt="grid" />
+                            <img src="../../images/grid.png" alt="grid" />
                             Setting
                         </Link>
                     </div>
                     <div className="col-12">
                         <Link className="left-items" exact to="/class">
-                            <img src="./images/grid.png" alt="grid" />
+                            <img src="../../images/grid.png" alt="grid" />
                             AFQ
                         </Link>
                     </div>
@@ -60,12 +61,12 @@ function SeeAllf(){
                 {/* teacher courses here */}
                 <div className="course course-12 col-12 row">
                     <div className="">
-                        <img className="course-image" src="./images/adobe.jpg" alt="White-star"  />
+                        <img className="course-image" src="../../images/adobe.jpg" alt="White-star"  />
                         <NavLink className="course-title" exact to="/course/">
                             <div className="title">Adobe Illustrator Fundmentals</div>
                             <span className="rate">
                                 <span>4.6</span>
-                                <img src="./images/White-star.png" alt="White-star" />
+                                <img src="../../images/White-star.png" alt="White-star" />
                             </span>
                         </NavLink>
                     </div>
